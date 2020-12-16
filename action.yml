@@ -1,0 +1,16 @@
+name: 'ytb-combiner'
+description: 'Download video from Youtube and upload it via rclone.'
+author: 'NekomiyaKumi'
+inputs:
+  bucket:
+    description: 'Upload destination, in `dest:full/path` format. Will be directly passed to rclone.'
+    required: true
+  video_url:
+    description: 'Url to video'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'package'
+  color: 'orange'
