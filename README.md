@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v2
         
       - name: Combiner
-        uses: nekomiyakumi/ytb-combiner@v1
+        uses: nekomiyakumi/ytb-combiner@v2
         with:
           bucket: target:bucket
           video_url: ${{ github.event.inputs.url }}
