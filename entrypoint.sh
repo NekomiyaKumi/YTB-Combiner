@@ -12,6 +12,6 @@ if [ -z ${INPUT_BUCKET} ]; then
 	exit 1
 fi
 
-youtube-dl ${INPUT_VIDEO_URL} --format "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best" --merge-output-format mp4
+yt-dlp ${INPUT_VIDEO_URL} --format "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best" --merge-output-format mp4
 
 rclone copyto "$(ls | grep mp4)" "${INPUT_BUCKET}/$(ls | grep mp4)" -P
